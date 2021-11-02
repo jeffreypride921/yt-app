@@ -9,7 +9,8 @@
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-gap: 2.5rem;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 2rem;
