@@ -1,0 +1,89 @@
+.page {
+    background-color: #121212;
+    top: 0;
+    left: 0;
+}
+
+.options {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 2.5rem;
+    justify-content: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.ytItems {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
+    grid-gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title,
+.channel {
+    width: 320px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.channel {
+    color: grey;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: white;
+    font-size: 2rem;
+    border: none;
+    background: none;
+}
+
+label:hover {
+    /* transition: all 0.2s ease-out; */
+    color: red;
+}
+
+input[type="radio"]:checked+label {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+img {
+    transition: transform .2s;
+}
+
+img:hover {
+    transform: scale(1.1);
+    border: 3px solid red;
+}
+
+@media screen and (max-width: 960px) {
+    .options {
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+    }
+    input[type="radio"]:checked+label {
+        color: red;
+        border: none;
+        text-decoration: underline;
+    }
+}
