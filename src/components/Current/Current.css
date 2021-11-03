@@ -11,9 +11,8 @@
     grid-gap: 2.5rem;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .ytItems {
@@ -21,8 +20,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
     grid-gap: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -59,7 +56,6 @@ label {
 }
 
 label:hover {
-    /* transition: all 0.2s ease-out; */
     color: red;
 }
 
@@ -74,7 +70,11 @@ img {
 
 img:hover {
     transform: scale(1.1);
-    border: 3px solid red;
+    /* border: 1px solid red; */
+}
+
+.title:hover {
+    color: red;
 }
 
 @media screen and (max-width: 960px) {

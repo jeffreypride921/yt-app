@@ -8,7 +8,7 @@ class Navbar extends React.Component{
         return(
             <nav className="NavbarItems">
                 <Link to="/" style={{textDecoration: 'none'}}>
-                    <h1 className="navbar-logo">YT Live<i className="fab fa-youtube"></i></h1>
+                    <h1 className="navbar-logo"><i className="fab fa-youtube"></i>Live</h1>
                 </Link>
                 <ul className='nav-menu'>
                     {MenuItems.map((item, index) => {
