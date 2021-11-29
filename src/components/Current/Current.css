@@ -12,6 +12,17 @@
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.languages {
+    font-size: 0.1rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 3rem;
 }
 
@@ -55,6 +66,11 @@ label {
     background: none;
 }
 
+.languages label {
+    color: grey;
+    font-size: 1.5rem;
+}
+
 label:hover {
     color: red;
 }
@@ -66,23 +82,30 @@ input[type="radio"]:checked+label {
 
 img {
     transition: transform .2s;
+    outline-style: outset;
+    outline-color: grey;
 }
 
 img:hover {
     transform: scale(1.1);
-    /* border: 1px solid red; */
+    outline-color: red;
 }
 
-.title:hover {
+.title:hover,
+.channel:hover {
     color: red;
 }
 
 @media screen and (max-width: 960px) {
-    .options {
+    .options,
+    .languages {
         grid-template-columns: repeat(2, auto);
         justify-content: center;
         align-items: center;
         margin-left: auto;
+    }
+    .languages {
+        grid-template-columns: repeat(3, auto);
     }
     input[type="radio"]:checked+label {
         color: red;

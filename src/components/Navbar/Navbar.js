@@ -10,6 +10,10 @@ class Navbar extends React.Component{
                 <Link to="/" style={{textDecoration: 'none'}}>
                     <h1 className="navbar-logo"><i className="fab fa-youtube"></i>Live</h1>
                 </Link>
+                {/* <div className="searchBar">
+                    <input type="text" placeholder="Search..." name="search"></input>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div> */}
                 <ul className='nav-menu'>
                     {MenuItems.map((item, index) => {
                         return(
