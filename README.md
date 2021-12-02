@@ -12,7 +12,7 @@ Choosing 'Upcoming' on the navbar will display only scheduled upcoming streams.
 
 ## Filters
 
-You can filter the results by genre and language. Note that the language filter can still display streams in undisired languages. Check "relevanceLanguage" under YouTube Data API documentation for more info. https://developers.google.com/youtube/v3/docs/search/list
+You can filter the results by genre and language. Note that the language filter can still display streams in undesired languages. Check "relevanceLanguage" under YouTube Data API documentation for more info. https://developers.google.com/youtube/v3/docs/search/list
 
 ## URL
 
