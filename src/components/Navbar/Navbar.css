@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: .5rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -71,20 +71,18 @@
 }
 
 @media screen and (max-width: 960px) {
-    .NavbarItems {
-        position: relative;
-        font-size: 1rem;
+    .nav-links {
+        font-size: 1.25rem;
+        padding: none;
     }
     .nav-menu {
-        grid-gap: 0px;
-        font-size: 0rem;
-        margin-right: 0%;
+        margin-left: 5rem;
+        grid-gap: 5px;
     }
     .navbar-logo {
         position: absolute;
-        /* font-size: 2rem; */
         top: 0;
         left: 0;
-        transform: translate(-10%, -20%);
+        transform: translate(-10%, 45%);
     }
 }

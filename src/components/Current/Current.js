@@ -70,46 +70,7 @@ class Current extends React.Component{
         })
       this.SWITCH = -1;
     }
-    // if(this.CATEGORY === 2){
-    //   fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&topicId=/m/0bzvm2&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
-    //     .then((res) => res.json())
-    //     .then((json) => {
-    //       this.setState({
-    //         data: json
-    //       });
-    //     })
-    //   this.CATEGORY = 6;
-    // }
-    // if(this.CATEGORY === 3){
-    //   fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&topicId=/m/06ntj&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
-    //     .then((res) => res.json())
-    //     .then((json) => {
-    //       this.setState({
-    //         data: json
-    //       });
-    //     })
-    //   this.CATEGORY = 6;
-    // }
-    // if(this.CATEGORY === 4){
-    //   fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&topicId=/m/02jjt&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
-    //     .then((res) => res.json())
-    //     .then((json) => {
-    //       this.setState({
-    //         data: json
-    //       });
-    //     })
-    //   this.CATEGORY = 6;
-    // }
-    // if(this.CATEGORY === 5){
-    //   fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&topicId=/m/019_rr&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
-    //     .then((res) => res.json())
-    //     .then((json) => {
-    //       this.setState({
-    //         data: json
-    //       });
-    //     })
-    //   this.CATEGORY = 6;
-    // }
+    
   }
 
   render(){

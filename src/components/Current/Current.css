@@ -16,7 +16,7 @@
 }
 
 .languages {
-    font-size: 0.1rem;
+    /* font-size: 0.1rem; */
     list-style: none;
     display: grid;
     grid-template-columns: repeat(8, auto);
@@ -99,13 +99,23 @@ img:hover {
 @media screen and (max-width: 960px) {
     .options,
     .languages {
-        grid-template-columns: repeat(2, auto);
         justify-content: center;
         align-items: center;
         margin-left: auto;
     }
-    .languages {
+    .options {
         grid-template-columns: repeat(3, auto);
+        grid-gap: 1.5rem;
+        text-align: center;
+    }
+    .languages {
+        grid-template-columns: repeat(4, auto);
+    }
+    label {
+        font-size: 1.25rem;
+    }
+    .languages label {
+        font-size: 1rem;
     }
     input[type="radio"]:checked+label {
         color: red;
