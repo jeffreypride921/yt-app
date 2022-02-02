@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter forceRefresh>
     <App />
   </BrowserRouter>,
   document.getElementById('root')

@@ -1,6 +1,7 @@
 .NavbarItems {
     background: #1f1f1f;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,22 +10,28 @@
     top: 0;
     left: 0;
     z-index: 2;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0.99;
 }
 
 .navbar-logo {
+    position: absolute;
+    left: 5vw;
     font-size: 2rem;
     display: flex;
-    align-items: center;
     color: white;
-    justify-self: start;
-    margin-left: 3rem;
     cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-logo :hover {
+    color: red;
 }
 
 .fa-youtube {
     margin-right: 0.5rem;
-    font-size: 1.25em !important;
+    font-size: 1.25em !important
 }
 
 .fa-bars {
@@ -36,53 +43,173 @@
 }
 
 .nav-menu {
+    position: absolute;
+    left: 80vw;
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: end;
-    width: 80vw;
     justify-content: end;
     margin-right: 1rem;
 }
 
-.nav-links {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-}
-
-.nav-links:hover {
-    background-color: #0f0f0f;
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
+input,
+button {
+    outline: none;
+    border: 1px solid #363636;
+    border-radius: 2px;
 }
 
 .searchBar {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 500%;
+}
+
+.searchBar :focus {
+    border: 1px solid red;
 }
 
 .searchBar input[type=text] {
-    width: 25rem;
+    width: 30rem;
+    height: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 10px;
+    background-color: #121212;
+    color: white;
+    font-size: 1rem;
+}
+
+.searchButton {
+    height: 2.65rem;
+    width: 2.65rem;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #363636;
+    color: white;
+    font-size: 1rem;
+}
+
+.search-menu-icon,
+.menu-icon {
+    display: none;
+}
+
+label[for='upcoming'],
+label[for='live'] {
+    color: white;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+}
+
+label[for='upcoming']:hover,
+label[for='live']:hover {
+    background-color: #0f0f0f;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    color: white;
+}
+
+input[type="radio"]:checked+label[for='upcoming'],
+input[type="radio"]:checked+label[for='live'] {
+    border: none;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 960px) {
-    .nav-links {
-        font-size: 1.25rem;
-        padding: none;
+    .searchBar {
+        position: absolute;
+        top: 80px;
+        left: -100px;
+        width: 100%;
+        height: 0px;
+        opacity: 0;
+        transition: 0.25s ease;
+    }
+    .searchBar input[type=text] {
+        width: 89%;
+        border-radius: 0px;
+    }
+    .searchButton {
+        width: 11%;
+        border-radius: 0px;
+    }
+    .searchBar.active {
+        display: flex;
+        top: 80px;
+        left: 0;
+        opacity: 1;
     }
     .nav-menu {
-        margin-left: 5rem;
-        grid-gap: 5px;
+        position: absolute;
+        top: -80px;
+        left: 0px;
+        width: 100%;
+        height: 0px;
+        opacity: 0;
+        transition: 0.25s ease;
+        padding-bottom: 0.5rem;
+    }
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        height: 130px;
+        z-index: 2;
+        background-color: #1f1f1f;
+        opacity: 1;
+        transition: 0.25s ease;
+    }
+    label[for='upcoming'],
+    label[for='live'] {
+        text-align: center;
+        display: table;
+        width: 100%;
+        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    label[for='upcoming']:hover,
+    label[for='live']:hover {
+        border-radius: 0px;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-130%, 60%);
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .menu-icon.hidden {
+        display: none;
+    }
+    .search-menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-290%, 69%);
+        font-size: 1.9rem;
+        cursor: pointer;
+        color: white;
+    }
+    .search-menu-icon.hidden {
+        display: none;
+    }
+    .fa-times {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-170%, 80%);
+        font-size: 2rem;
     }
     .navbar-logo {
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(-10%, 45%);
+        transform: translate(30%, 50%);
     }
 }

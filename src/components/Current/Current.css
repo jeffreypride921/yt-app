@@ -4,26 +4,57 @@
     left: 0;
 }
 
+.genre,
+.lang {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    justify-content: left;
+}
+
+.lang {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.genreTitle,
+.langTitle {
+    font-size: 1.5rem;
+    color: white;
+}
+
 .options {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-gap: 2.5rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    grid-gap: 1rem;
+    margin-left: 2rem;
 }
 
 .languages {
-    /* font-size: 0.1rem; */
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(7, auto);
     grid-gap: 1rem;
-    justify-content: center;
+    margin-left: 2rem;
+}
+
+.searchTitle {
+    position: relative;
+    left: 12.5%;
+    width: 75%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
     margin-bottom: 3rem;
+    white-space: initial;
+    overflow: hidden;
 }
 
 .ytItems {
@@ -42,13 +73,15 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     color: white;
-    margin-bottom: 2px;
+}
+
+.title {
+    margin-top: 10px;
 }
 
 .channel {
     color: grey;
     margin-top: 2px;
-    margin-bottom: 10px;
 }
 
 a {
@@ -60,15 +93,10 @@ input[type="radio"] {
 }
 
 label {
-    color: white;
-    font-size: 2rem;
-    border: none;
-    background: none;
-}
-
-.languages label {
     color: grey;
     font-size: 1.5rem;
+    border: none;
+    background: none;
 }
 
 label:hover {
@@ -97,29 +125,34 @@ img:hover {
 }
 
 @media screen and (max-width: 960px) {
+    .genre,
+    .lang {
+        flex-direction: column;
+        margin-left: 3rem;
+    }
     .options,
     .languages {
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-    }
-    .options {
         grid-template-columns: repeat(3, auto);
-        grid-gap: 1.5rem;
-        text-align: center;
-    }
-    .languages {
-        grid-template-columns: repeat(4, auto);
+        margin-left: 0;
     }
     label {
-        font-size: 1.25rem;
-    }
-    .languages label {
-        font-size: 1rem;
+        font-size: .8rem;
     }
     input[type="radio"]:checked+label {
         color: red;
         border: none;
         text-decoration: underline;
+    }
+    .genreTitle,
+    .langTitle {
+        font-size: 1rem;
+        align-self: flex-start;
+        margin-bottom: 1rem;
+    }
+    .langTitle {
+        margin-top: 1.5rem;
+    }
+    .searchTitle {
+        font-size: 2rem;
     }
 }
