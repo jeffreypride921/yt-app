@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Current from './components/Current/Current';
-import Upcoming from './components/Upcoming/Upcoming';
 
 class App extends React.Component {
   YOUTUBE_SEARCH_API = 'https://youtube.googleapis.com/youtube/v3/search';
@@ -104,7 +103,6 @@ class App extends React.Component {
           <Route exact path="/">
             <Current changeCategoryParent={this.changeCategory} changeLanguageParent={this.changeLanguage} data={this.state} viewSearch={this.SEARCH}></Current>
           </Route>
-          <Route exact path="/upcoming" component={Upcoming}/>
         </Switch>
       </div>
     );
