@@ -10,7 +10,7 @@ class App extends React.Component {
   CATEGORY = '';
   LANGUAGE = '';
   SEARCH = '';
-  TYPE='';
+  TYPE='live';
   ORDER='viewCount';
 
   constructor(props) {
