@@ -11,8 +11,7 @@
     width: auto;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    margin-left: 2rem;
-    justify-content: left;
+    justify-content: center;
 }
 
 .lang {
@@ -128,12 +127,15 @@ img:hover {
     .genre,
     .lang {
         flex-direction: column;
-        margin-left: 3rem;
+        margin-left: 3.25rem;
+        width: 65%;
     }
     .options,
     .languages {
         grid-template-columns: repeat(3, auto);
         margin-left: 0;
+        margin-right: 0;
+        grid-gap: 1rem;
     }
     label {
         font-size: .8rem;
