@@ -27,30 +27,30 @@ class App extends React.Component {
     this.changeType = this.changeType.bind(this);
   }
 
-  changeCategory(categoryVal, switchVal){
-    this.SWITCH=switchVal;
+  changeCategory(categoryVal){
     this.CATEGORY=categoryVal;
+    this.SWITCH=1;
 
     this.setState({data: []});
   }
 
-  changeLanguage(languageVal, switchVal){
-    this.SWITCH=switchVal;
+  changeLanguage(languageVal){
     this.LANGUAGE=languageVal;
+    this.SWITCH=1;
 
     this.setState({data: []});
   }
 
-  changeSearch(searchVal, switchVal){
-    this.SWITCH=switchVal;
+  changeSearch(searchVal){
     this.SEARCH=searchVal;
+    this.SWITCH=1;
 
     this.setState({data: []});
   }
 
-  changeType(typeVal, switchVal){
-    this.SWITCH=switchVal;
+  changeType(typeVal){
     this.TYPE=typeVal;
+    this.SWITCH=1;
 
     if(this.TYPE === 'upcoming'){
       this.ORDER='videoCount';
@@ -73,16 +73,6 @@ class App extends React.Component {
   }
 
   componentDidUpdate(){
-    if(this.SWITCH === 0){
-      fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&q=${this.state.searchTerm}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
-        .then((res) => res.json())
-        .then((json) => {
-          this.setState({
-            data: json
-          });
-        })
-      this.CATEGORY = -1;
-    }
     if(this.SWITCH === 1){
       fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=${this.TYPE}&type=video&maxResults=50&order=${this.ORDER}&safeSearch=none&topicId=${this.CATEGORY}&relevanceLanguage=${this.LANGUAGE}&q=${this.SEARCH}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
         .then((res) => res.json())

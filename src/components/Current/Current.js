@@ -4,7 +4,6 @@ import './Current.css';
 class Current extends React.Component{
 
   YOUTUBE_SEARCH_API = 'https://youtube.googleapis.com/youtube/v3/search';
-  SWITCH = -1;
   CATEGORY = '';
   LANGUAGE = '';
 
@@ -15,9 +14,8 @@ class Current extends React.Component{
     if(category === 'sports') this.CATEGORY = '/m/06ntj';
     if(category === 'entertainment') this.CATEGORY = '/m/02jjt';
     if(category === 'lifestyle') this.CATEGORY = '/m/019_rr';
-    this.SWITCH = 1;
 
-    this.props.changeCategoryParent(this.CATEGORY, this.SWITCH);
+    this.props.changeCategoryParent(this.CATEGORY);
   }
 
   changeLanguage = (lang) => {
@@ -28,9 +26,8 @@ class Current extends React.Component{
     if(lang === 'chinese') this.LANGUAGE='zh';
     if(lang === 'japanese') this.LANGUAGE='ja';
     if(lang === 'korean') this.LANGUAGE='ko';
-    this.SWITCH = 1;
 
-    this.props.changeLanguageParent(this.LANGUAGE, this.SWITCH);
+    this.props.changeLanguageParent(this.LANGUAGE);
   }
 
   render(){
