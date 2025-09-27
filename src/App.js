@@ -12,6 +12,7 @@ class App extends React.Component {
   SEARCH = '';
   TYPE='live';
   ORDER='viewCount';
+  EMPTY=' ';
 
   constructor(props) {
     super(props);
@@ -63,7 +64,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+    fetch(`${this.YOUTUBE_SEARCH_API}?part=snippet&eventType=live&type=video&maxResults=50&order=viewCount&safeSearch=none&q=${this.EMPTY}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
       .then((res) => res.json())
       .then((json) => {
         this.setState({
